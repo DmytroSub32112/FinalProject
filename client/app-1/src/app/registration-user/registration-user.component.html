@@ -1,0 +1,36 @@
+<form  [formGroup]="myform" (ngSubmit)="Submit(myform)" >
+    <h3>Login</h3>
+    <div class="form-row"> 
+        <input type="text" required formControlName ="name" value="name">
+    </div>
+    <div class="form-row">
+     <input type="text" required formControlName ="lastname" value="lastname">
+    </div>
+    <div class="form-row"><input  type="text" required formControlName="patronomic" value="patronomic">
+     <br>
+    </div>
+    <div class="form-row">
+     <input type="text"  required formControlName="password" value="password">
+     <br></div>
+     <div class="form-row"> 
+        <input type="text" required formControlName ="date" value="date">
+    </div>
+    <div class="form-row">
+     <input type="text" required formControlName ="mobilenumber" value="mobilenumber">
+    </div>
+    <div class="form-row"><input  type="text" required formControlName="emaill" value="emaill">
+     <br>
+    </div>
+    <div class="form-row">
+     <input type="text"  required formControlName="login" value="login">
+     <br></div>
+     <div class="form-row">
+     <input type="text"  required formControlName="link" value="link">
+     <br></div>
+     <div class="form-row">
+     <input type="submit" [disabled]="myform.invalid" class="btn"></div>
+     <div *ngIf="myform.invalid" color="red"><h3 style="text-align:center;color: red;">Введите правильно данные!!!</h3>
+        </div>
+   
+ </form>
+
